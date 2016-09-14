@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <title> HTML5 autofocus属性测试 </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="renfufei@qq.com">
+  <meta name="Description" content="original=http://davidwalsh.name/autofocus">
+ </head>
+
+ <body>
+ <!-- 原则上，以下三个元素，只能有一个设置autofocus 属性，如果多个元素都设置，应该是最后一个元素获取了焦点 -->
+ <!--
+ -->
+<div id="dev1">
+	<input/>
+	<button>Hi!</button>
+	<textarea></textarea>
+
+	<input autofocus="autofocus"/>
+	<button autofocus="autofocus">Hi!</button>
+	<textarea autofocus="autofocus"></textarea>
+</div>
+<div id="dev2" style="display:none;">
+	<input/>
+	<button>Hi!</button>
+	<textarea></textarea>
+	
+	<input autofocus="autofocus"/>
+	<button autofocus="autofocus">Hi!</button>
+	<textarea autofocus="autofocus"></textarea>
+</div>
+ </body>
+</html>
