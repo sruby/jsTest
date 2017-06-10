@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div>
+			<div id="t"></div>
+			<input type="text" id="text" value="" />
+			<input type="button" name="s" id="s" value="write" onclick="test()"/>
+		</div>
+		<script type="text/javascript">
+			
+			/**
+			 * 对于使用innerHTML赋值的，使用以下方式可以造成攻击
+			 * 攻击方式1：
+			 * ' onclick=alert('xss') // 
+			 * 攻击方式2：
+			 * '> <img src onerror=alert(/xss/) /> /
+			 * 
+			 */
+			function test(){
+				var str = document.getElementById("text").value;
+				document.getElementById("t").innerHTML = "<a href='"+str+"'>testlink</a>";
+			}
+		</script>
+	</body>
+</html>
